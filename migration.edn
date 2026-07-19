@@ -1,0 +1,4 @@
+{:schema "etzhayyim.migration/v1"
+ :source {:repository "etzhayyim/root" :revision "c9e7df4b327a3ee7b5ed25fb3480db45553c33ed" :path "60-apps/etzhayyim-project-kabi" :tree "ead5aa08e43b6733fe6f68b4b276956748cdff29" :tracked-files 12 :bytes 13496}
+ :destination {:repository "etzhayyim/com-etzhayyim-app-kabi"}
+ :identity {:allowed-additions ["README.edn" "migration.edn"]}}
