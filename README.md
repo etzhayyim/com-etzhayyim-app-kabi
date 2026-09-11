@@ -19,7 +19,7 @@ Worker/XRPC logic was moved, not rewritten:
 
 | Then | Now |
 |---|---|
-| `svelte/src/routes/+page.svelte` (the status page) | [`cljs/src/kabi/app.cljs`](cljs/src/kabi/app.cljs) — same seven facts + own path, faithfully ported (route/var counts corrected against `wrangler.jsonc`, see that namespace's docstring) |
+| `svelte/src/routes/+page.svelte` (the status page) | [`cljs/src/kabi/app.cljk`](cljs/src/kabi/app.cljk) — same seven facts + own path, faithfully ported (route/var counts corrected against `wrangler.jsonc`, see that namespace's docstring) |
 | `svelte/src/routes/xrpc/[...path]/+server.ts` (the deployed XRPC handler, per `wrangler.jsonc`'s old `main`) | [`src/xrpc-dispatcher.ts`](src/xrpc-dispatcher.ts) — moved byte-for-byte, only a provenance header comment added |
 | `wrangler.jsonc` `main: svelte/.svelte-kit/cloudflare/_worker.js` | `main` dropped entirely |
 | `wrangler.jsonc` `assets.directory: ./svelte/.svelte-kit/cloudflare/client` | `assets.directory: ./cljs/public` |
